@@ -20,7 +20,7 @@ const className = computed(() => props.class);
     </SidebarInset>
     <main
         v-else
-        class="mx-auto flex h-full w-full max-w-7xl flex-1 flex-col gap-4 rounded-xl"
+        class="AppLayout mx-auto flex h-full w-full flex-1 flex-col gap-4 rounded-xl px-4 py-4 lg:px-16"
         :class="className"
     >
         <slot />

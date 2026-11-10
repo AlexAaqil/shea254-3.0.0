@@ -76,9 +76,9 @@ const rightNavItems: NavItem[] = [
 </script>
 
 <template>
-    <div>
+    <div class="sticky top-0 bg-background/95 backdrop-blur-sm">
         <div class="border-sidebar-border/80 border-b">
-            <div class="mx-auto flex h-16 items-center px-4 md:max-w-7xl">
+            <div class="mx-auto flex h-16 items-center px-4 lg:px-16">
                 <!-- Mobile Menu -->
                 <div class="lg:hidden">
                     <Sheet>
@@ -251,12 +251,12 @@ const rightNavItems: NavItem[] = [
                                     <AvatarImage
                                         v-if="auth.user.avatar"
                                         :src="auth.user.avatar"
-                                        :alt="auth.user.name"
+                                        :alt="auth.user.first_name"
                                     />
                                     <AvatarFallback
                                         class="rounded-lg bg-neutral-200 font-semibold text-black dark:bg-neutral-700 dark:text-white"
                                     >
-                                        {{ getInitials(auth.user?.name) }}
+                                        {{ getInitials(auth.user?.first_name) }}
                                     </AvatarFallback>
                                 </Avatar>
                             </Button>
